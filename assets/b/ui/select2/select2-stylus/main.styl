@@ -1,0 +1,87 @@
+.select2-container
+    margin 0
+    position relative
+    display inline-block
+    vertical-align middle
+    width select2Width
+    font-family  select2Font
+    font-size select2FontSize
+    .select2-choice
+        display block
+        height select2Height
+        padding 0 0 0 select2PaddingLeft
+        overflow hidden
+        position relative
+        border select2BorderSize select2BorderType select2BorderColor
+        white-space nowrap
+        line-height select2Height
+        color select2Color
+        text-decoration none
+        border-radius select2BorderRadius
+        touch-callout none
+        user-select none
+        background-color select2BackgroundFinishColor
+        background-image linear-gradient(to top, select2BackgroundStartColor 0%, select2BackgroundFinishColor 50%)
+        html[dir="rtl"]
+            padding 0 select2PaddingLeft 0 0
+        abbr
+            display none
+            width 12px
+            height 12px
+            position absolute
+            right 24px
+            top 8px
+            font-size 1px
+            text-decoration none
+            border 0
+            background select2LabelCloseImage right top no-repeat
+            cursor pointer
+            outline 0
+            &:hover
+                background select2LabelCloseImageActive right top no-repeat
+                cursor pointer
+
+
+
+.select2-container
+    .select2-drop-above
+        .select2-choice
+            border-bottom-color select2BorderColor
+            border-radius 0 0 select2BorderRadius select2BorderRadius
+            // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+            background-image: linear-gradient(to bottom, select2BackgroundStartColor 0%, select2BackgroundFinishColor 90%);
+
+.select2-container
+    &.select2-allowclear
+        .select2-choice
+            .select2-chosen
+                margin-right 42px
+            abbr
+                    display inline-block
+.select2-container-active
+    .select2-choice,
+    .select2-choices
+        border select2BorderSize select2BorderType select2BorderColor
+        outline none
+        box-shadow 0 0 5px rgba(0, 0, 0, .3)
+
+.select2-container
+    .select2-choice
+        & > .select2-chosen
+            margin-right 26px
+            display block
+            overflow hidden
+            white-space nowrap
+            text-overflow ellipsis
+            float none
+            width auto
+            html[dir="rtl"]
+                margin-left 26px
+                margin-right 0
+
+
+
+.select2-result-selectable
+    .select2-match,
+    .select2-match
+        text-decoration underline

@@ -1,0 +1,77 @@
+.select2-drop-mask
+    border 0
+    margin 0
+    padding 0
+    position fixed
+    left 0
+    top 0
+    min-height 100%
+    min-width 100%
+    height auto
+    width auto
+    opacity 0
+    z-index 9998
+    background-color select2DropdownBackground
+    // filter alpha(opacity=0)
+
+.select2-drop
+    width 100%
+    margin-top -(select2BorderSize+1px)
+    position absolute
+    z-index 9999
+    top 100%
+    background select2DropdownBackground
+    color #000
+    border select2DropdownBorderSize select2DropdownBorderType select2DropdownBorderColor
+    border-top 0
+    border-radius 0 0 select2DropdownBorderRadius select2DropdownBorderRadius
+    box-shadow select2DropdownShadow
+    &.select2-drop-above
+        margin-top select2BorderSize
+        border-top select2DropdownBorderSize select2DropdownBorderType select2DropdownBorderColor
+        border-bottom 0
+        border-radius select2DropdownBorderRadius select2DropdownBorderRadius 0 0
+        box-shadow select2DropdownShadowRevert
+        &.select2-drop-active
+            border-top select2DropdownBorderSizeActive select2DropdownBorderTypeActive select2DropdownBorderColorActive
+        .select2-search
+            input
+                margin-top 4px
+
+.select2-drop-active
+    border 1px solid select2DropdownBorderColorActive
+    border-top none
+
+.select2-drop-auto-width
+    border-top select2DropdownBorderSize select2DropdownBorderType select2DropdownBorderColor
+    width auto
+    .select2-search
+        padding-top 4px
+
+
+.select2-dropdown-open
+    .select2-choice
+        border-color select2OpenBorderColorActive
+        box-shadow select2OpenShadow
+        border-radius select2BorderRadius select2BorderRadius 0 0
+        background-color select2OpenBackgroundStartColor
+        // background-image filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0)
+        background-image linear-gradient(to top, select2OpenBackgroundStartColor 0%, select2OpenBackgroundFinishColor 50%)
+        .select2-arrow
+            background transparent
+            border-left none
+            b
+                background select2ArrowBackgroundImagesActive no-repeat center center
+
+.select2-dropdown-open
+    .select2-drop-above
+        .select2-choice,
+        .select2-choices
+            border select2BorderSize select2BorderType select2OpenBorderColorActive
+            border-color select2OpenBorderColorActive
+            background-image linear-gradient(to top, select2OpenBackgroundStartColor 0%, select2OpenBackgroundFinishColor 50%)
+            .select2-arrow
+                html[dir="rtl"]
+                    border-right none
+
+

@@ -1,0 +1,34 @@
+.select2-search
+    display inline-block
+    width 100%
+    min-height select2Height
+    margin 0
+    margin-top 4px
+    padding-left select2SearchPadding
+    padding-right select2SearchPadding
+    position relative
+    z-index 10000
+    white-space nowrap
+    input
+        width 100%
+        height auto !important
+        min-height select2Height
+        padding select2SearchPadding 20px select2SearchPadding select2SearchPadding+1px
+        margin 0
+        outline 0
+        font-family sans-serif
+        font-size 1em
+        border select2SearchBorderSize select2SearchBorderType select2SearchBorderColor
+        border-radius select2SearchBorderRadius
+        box-shadow none
+        background select2SearchBackgroundStartColor select2SearchBackgroundImages no-repeat right 3px center
+        background select2SearchBackgroundImages no-repeat right 3px center, linear-gradient(to bottom, select2SearchBackgroundStartColor 85%, select2SearchBackgroundFinishColor 99%) 0 0
+
+        html[dir="rtl"]
+            padding select2SearchPadding select2SearchPadding+1px select2SearchPadding 20px
+            background #fff select2SearchBackgroundImages no-repeat left 3px center
+            background select2SearchBackgroundImages no-repeat left 3px center, linear-gradient(to bottom, #fff 85%, select2SearchBackgroundFinishColor 99%) 0 0
+        &.select2-active
+            background select2SearchBackgroundStartColor select2SearchBackgroundImagesSpinner no-repeat right 3px center
+            background select2SearchBackgroundImagesSpinner no-repeat right 3px center, linear-gradient(to bottom, select2SearchBackgroundStartColor 85%, select2SearchBackgroundFinishColor 99%) 0 0
+

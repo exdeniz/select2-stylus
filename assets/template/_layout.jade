@@ -1,0 +1,29 @@
+doctype
+html(lang="ru")
+  head
+    title Select2-Stylus
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1")
+    // script(src="http://fast.fonts.net/jsapi/affed0cf-bdec-4a49-978c-327a314b90cd.js")
+    link(href='./css/blocks.css', type="text/css", rel="stylesheet")
+    link(href='./css/blocks.uri.css', type="text/css", rel="stylesheet")
+    include _favicon.jade
+    <!--[if IE 8]><link rel="stylesheet" href="./css/blocks.ie.css"><![endif]-->
+    <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script><![endif]-->
+
+  body
+    .angular(ng-app="ucApp")
+        .scrollblock_wrap
+            .scrollblock
+                block content
+
+
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js")
+    script(src="./js/vendor.js")
+    script(src="./js/index.js")
+    script.
+        if (location.hostname === 'localhost') {
+                $(document).write("<script defer src='//HOST:3000/socket.io/socket.io.js'><\/script><script defer src='//HOST:3001/client/browser-sync-client.0.9.1.js'><\/script>".replace(/HOST/g, location.hostname));
+
+
+                }

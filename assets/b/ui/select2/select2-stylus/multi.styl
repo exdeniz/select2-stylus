@@ -1,0 +1,60 @@
+.select2-container-multi
+    .select2-choices
+        height auto !important
+        height 1%
+        min-height select2Height
+        margin 0
+        padding 0
+        position relative
+        border select2BorderSize select2BorderType select2BorderColor
+        cursor text
+        overflow hidden
+        background-color select2BackgroundFinishColor
+        background-image linear-gradient(to bottom, select2BackgroundStartColor 1%, select2BackgroundFinishColor 15%)
+        li
+            float left
+            list-style none
+            html[dir="rtl"]
+                float right
+        .select2-search-field
+            margin 0
+            padding 0
+            white-space nowrap
+            input
+                padding 5px
+                margin 1px 0
+                font-family sans-serif
+                font-size 100%
+                color #666
+                outline 0
+                border 0
+                box-shadow none
+                background transparent !important
+                &.select2-active
+                    background select2BackgroundFinishColor select2SearchBackgroundImagesSpinner no-repeat 100% !important
+        .select2-search-choice-close
+            left 3px
+
+.select2-container-multi
+    &.select2-container-active
+        .select2-choices
+            border select2BorderSize select2BorderType select2BorderColorActive
+            outline none
+            box-shadow select2ShadowColorActive
+
+
+
+    &.select2-container-active
+        .select2-choices
+            border select2BorderSize select2BorderType select2BorderColorActive
+            outline none
+            box-shadow select2ShadowColorActive
+
+
+
+.select2-locked
+    padding 3px 5px 3px 5px !important
+
+.select2-default
+    color #999 !important
+

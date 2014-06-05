@@ -1,0 +1,91 @@
+abs_center()
+    position absolute
+    margin auto
+    top 0
+    bottom 0
+    left 0
+    right 0
+    sf()
+
+abs_bottom()
+    position absolute
+    margin auto
+    bottom 0
+    left 0
+    right 0
+    sf()
+
+sf()
+    &:after
+        visibility hidden
+        display block
+        content ''
+        clear both
+        height 0
+
+
+
+fz(fz)
+    fontSizeRem = unit(fz,'rem')
+    fontSizePx = unit(fz*10,'px')
+    font-size fontSizePx
+    font-size fontSizeRem
+
+lh(lh)
+    lineHeightRem = unit(lh,'rem')
+    lineHeightPx = unit(lh*10,'px')
+    line-height lineHeightPx
+    line-height lineHeightRem
+
+fl(fz,lh)
+    fontSizeRem = unit(fz,'rem')
+    fontSizePx = unit(fz*10,'px')
+    lineHeightRem = unit(lh,'rem')
+    lineHeightPx = unit(lh*10,'px')
+    font-size fontSizePx
+    font-size fontSizeRem
+    line-height lineHeightPx
+    line-height lineHeightRem
+h(h)
+    heightSizeRem = unit(h,'rem')
+    heightSizePx = unit(h*10,'px')
+    height heightSizePx
+    height heightSizeRem
+w(w)
+    widthSizeRem = unit(w,'rem')
+    widthSizePx = unit(w*10,'px')
+    width widthSizePx
+    width widthSizeRem
+t(t)
+    topSizeRem = unit(t,'rem')
+    topSizePx = unit(t*10,'px')
+    top topSizePx
+    top topSizeRem
+
+p(top = 0, left = 0, bottom = 0, right = 0)
+    padding unit(top*10,'px') unit(left*10,'px') unit(bottom*10,'px') unit(right*10,'px')
+    padding unit(top,'rem') unit(left,'rem') unit(bottom,'rem') unit(right,'rem')
+
+m(top = 0, left = 0, bottom = 0, right = 0)
+    margin unit(top*10,'px') unit(left*10,'px') unit(bottom*10,'px') unit(right*10,'px')
+    margin unit(top,'rem') unit(left,'rem') unit(bottom,'rem') unit(right,'rem')
+
+bg(pos-x = center,pos-y = center)
+    background-repeat no-repeat
+    background-position pos-x pos-y
+b(b,line,color)
+    borderSizeRem = unit(b,'rem')
+    borderSizePx = unit(b*10,'px')
+    border borderSizePx line color
+    border borderSizeRem line color
+bt(bt,line,color)
+    borderSizeRem = unit(bt,'rem')
+    borderSizePx = unit(bt*10,'px')
+    border-top borderSizePx line color
+    border-top borderSizeRem line color
+
+bb(bb,line,color)
+    borderSizeRem = unit(bb,'rem')
+    borderSizePx = unit(bb*10,'px')
+    border-bottom borderSizePx line color
+    border-bottom borderSizeRem line color

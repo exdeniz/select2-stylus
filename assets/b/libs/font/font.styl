@@ -1,0 +1,39 @@
+// Mixin for font load
+
+
+defaultFont = 'Helvetica', sans-serif;
+fontPath = "../fonts/"
+
+fontload(fontFile,fontName,fontWidth,fontStyle)
+    @font-face
+        font-family fontName
+        src url(fontPath fontFile '.eot')
+        src url(fontPath fontFile '.eot?#iefix') format('embedded-opentype'), url(fontPath fontFile '.ttf')  format('truetype'), url(fontPath fontFile '.svg#09be4bfe8975a657af6444a6f1d73848') format('svg')
+        font-style fontStyle
+        font-weight fontWidth
+
+
+fontload('HelveticaNeue-Light',HelveticaNeue,normal, normal)
+
+
+
+ff(fontfamaly = defaultFont,fsz=1.6,lhsz=normal)
+    if fontfamaly == defaultFont
+        font-family defaultFont, sans-serif;
+        font-size unit(fsz,rem)
+        line-height normal
+        font-weight 400
+        font-style normal
+
+    if fontfamaly == 'light_f'
+        font-family "HelveticaNeue-Light", sans-serif;
+        font-size unit(fsz,rem)
+        if (lhsz != 'normal')
+            line-height unit(lhsz,rem)
+        else
+            line-height normal
+
+        font-weight 300
+        font-style normal
+
+    z
