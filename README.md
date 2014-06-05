@@ -29,6 +29,8 @@ Select2 Stylus
 * Поддержка Retina
 * Поддержка тем
 * Тема для bootstrap
+* Разделение настроек основные и полные.
+* Тюнинг в соотвествие с принципами Stylus =) 
 
 Usage
 -----
@@ -39,7 +41,7 @@ Usage
 
     * Устанавливаем npm install
     * Запускаем gulp (тестовый сайт)
-    * Работаем с переменными 
+    * Работаем с переменными в assets/ui/select2/select2-stylus/setting.styl
     * Получаем результат в build
 
 Copyright and license
